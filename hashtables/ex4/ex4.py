@@ -2,9 +2,15 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    num_cache = {}
+    pos_num_list = []
 
-    return result
+    for num in a:
+        num_cache[num] = 1
+        if num is not 0 and num * -1 in num_cache:
+            pos_num_list.append(abs(num))
+
+    return pos_num_list
 
 
 if __name__ == "__main__":
